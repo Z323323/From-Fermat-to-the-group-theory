@@ -76,3 +76,54 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 
 </p>
 
+## $a^{p - 1} \equiv 1 \mod p$ case proof background
+
+### Cancellation law
+<p>
+  If $u, x, y$ are integers and $u$ is coprime with a prime $p$ then if:<br>
+
+  $ux \equiv uy \mod p$
+  
+  -> $x \equiv y \mod p$
+
+  because if:
+
+   $ux \equiv uy \mod p$ -> $p | u(x - y)$
+
+   and since $u$ is coprime with $p$:
+
+   $p | (x - y)$ -> $x \equiv y \mod p$
+
+   Note that this law doesn't force any strict equality between the two congruences, i.e. the remainder could be different but these congruences hold. Also note the first 'if' statement: $ux \equiv uy \mod p$ is the starting point; the viceversa is not true. Infact this congruence forces $u$ to be big enough to restart the 'cycle' of $p$ otherwise it clearly wouldn't make sense. Also I guess that there's some rule on how many 'cycles', because even here is quite clear that if $x > y$, $u$ will make $x$ to restart the 'cycle' more often. There must be some 'overlapping' rule but for the moment we are good with this result.
+
+</p>
+
+### Rearrangement property
+
+<p>
+  $a, 2a, 3a, \dots, (p - 1)a \mod p$
+
+  becomes a 'rearrangement' of:
+  
+  $1, 2, 3, \dots, (p - 1)$
+
+  This one could look exactly like the former but it's not. This property does not care at all about congruences equalities; it just states that the first formula will be 'mapped' into that sequence of values. 'rearrangement' means that we don't care about which congruence will be mapped into which value, we just want to prove that all those values will be mapped. Nonetheless we will use the 'cancellation law' to prove it (:'D).
+The fact that no congruence will 'produce' $0$ is trivial. Why all those values will be distinct is the real question.
+<br>
+We take the sequence of congruences:
+
+$a, 2a, 3a, \dots, (p - 1)a \mod p$
+
+and represent each pair as:
+
+$ka \equiv ma \mod p$
+
+From the 'cancellation law' we know that since $a$ is coprime with $p$:
+
+$ka \equiv ma \mod p$
+
+-> $k \equiv m \mod p$
+
+but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved.
+  
+</p>

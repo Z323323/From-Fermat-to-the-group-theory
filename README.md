@@ -94,7 +94,7 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 
    $p | (x - y)$ -> $x \equiv y \mod p$
 
-   Note that this law doesn't force any strict equality between the two congruences, i.e. the remainder could be different but these congruences hold. Also note the first 'if' statement: $ux \equiv uy \mod p$ is the starting point; the viceversa is not true. Infact this congruence forces $u$ to be big enough to restart the 'cycle' of $p$ otherwise it clearly wouldn't make sense. Also I guess that there's some rule on how many 'cycles', because even here is quite clear that if $x > y$, $u$ will make $x$ to restart the 'cycle' more often. There must be some 'overlapping' rule but for the moment we are good with this result.
+   Note the first 'if' statement: $ux \equiv uy \mod p$ is the starting point; the viceversa is not true. Infact this congruence forces $u$ to be big enough to restart the 'cycle' of $p$ otherwise it clearly wouldn't make sense. Also I guess that there's some rule on how many 'cycles', because even here is quite clear that if $x > y$, $u$ will make $x$ to restart the 'cycle' more often. There must be some 'overlapping' rule which I guess it coincides with the Fermat's Little Theorem but for the moment we are good with this result.
 
 </p>
 

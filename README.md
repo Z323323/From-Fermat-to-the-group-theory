@@ -101,6 +101,8 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 ### Rearrangement property
 
 <p>
+$a$ and $p$ are coprimes, $p$ is prime:
+  
   $a, 2a, 3a, \dots, (p - 1)a \mod p$
 
   becomes a 'rearrangement' of:
@@ -124,6 +126,104 @@ $ka \equiv ma \mod p$
 
 -> $k \equiv m \mod p$
 
-but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved.
+but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved. Here should be noted that the 'rearrangement property' works if and only if we consider the whole $\\{1, 2, 3, \dots, (p - 1)\\}$ set. If we operate a removal of any element the property doesn't hold (for the Euler's Theorem proof it holds because it considers every coprime of $n$).
+  
+</p>
+
+## $a^{p - 1} \equiv 1 \mod p$ proof
+
+<p>
+  This proof has been discovered by James Ivory and Dirichlet.<br>
+  Having proved the former properties this will be easily understandable. <br>
+
+  We take the 'rearrangement property' and state that if it holds, then, this holds:
+
+  $a * 2a * 3a * \dots * (p - 1)a \equiv 1 * 2 * 3 * \dots * (p - 1) (\mod p)$
+
+  which is quite obvious at this point.<br>
+  Now we can collect every term:
+
+  $a^{p - 1}(p - 1)! \equiv (p - 1)! (\mod p)$
+
+  We can think at this formula as:
+
+  $a^{p - 1}(Z) \equiv 1(Z) (\mod p)$
+
+  where $Z$ is coprime with $p$, then, applying the 'cancellation law':
+
+  $a^{p - 1} \equiv 1 (\mod p)$
+
+  which proves $a^{p - 1} \equiv 1 \mod p$.
+</p>
+
+## Using the same reasoning to prove Euler's Theorem: $a^{\phi(n)} \equiv 1 \mod n$
+
+<p>
+  We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the 'rearrangement property' (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$ [result set: $\{z_{1}, z_{2}, \dots, z_{\phi(n)}\}$]):
+
+  $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} (\mod n)$
+
+  collecting the terms
+  
+  $a^{\phi(n)} Z \equiv (1)Z (\mod n)$
+
+  and using the 'cancellation law' (holds since $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$):
+
+  $a^{\phi(n)} \equiv 1 (\mod n)$
+
+  To prove the result set mentioned initially, it's actually quite trivial that:<br>
+
+  $a * z_{?} \equiv z_{?} \mod n$  
+  
+</p>
+
+## Proof of $a^{p - 1} \equiv 1 \mod p$ using elements of the group theory
+
+<p>
+  This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
+  
+  $G = \\{1, 2, \dots, p - 1\\}$
+
+  with the operation of multiplication:
+
+  $\\{G, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
+
+  where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse.<br>
+  Since all these requirements are quite obvious, the only one which needs a more detailed analysis is the inverse existence for every element which is anyway quite easy to prove: calling $z$ any element of G, since $z$ is coprime with $p$, the Bezout's Identity ensures that:
+
+  $zk + (-x)p = 1$
+
+  exists for every $z$, proving this statement. The problem now is to prove that $k < p$ and that every solution is unique, i.e. for every:
+
+  $z_{1}, z_{2} \in G$ -> $k_{1} \neq k_{2}$ where $k_{1}, k_{2} < p$
+
+  Given the omomorphism (which proves $k_{1}, k_{2} < p$):
+
+  $\varphi(a - b) = \varphi(a) - \varphi(b)$
+  
+  -> $(a - b) \mod p = a \mod p (-b) \mod p$
+  
+  -> $a + p - b \mod p = a \mod p + p - b \mod p$
+  
+  -> $a - b \mod p = a \mod p - b \mod p$
+
+  we can rewrite the Bezout's Indentity as:
+
+  $zk \equiv 1 \mod p$
+
+  Now we can reuse the almighty 'cancellation law' and state that if:
+
+  $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$
+  
+  it's true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and the Wilson's Theorem since this proof was requested to complete the proof.<br>
+
+  Now, since we just proved that $G$ is a multiplicative group (we can write it like: $G_{p}^{*}$):<br>
+
+  let $a$ be an element of $G_{p}^{*}$, let $k$ be the order of $a$, i.e. the smallest $k$ such that $a^{k} \equiv 1 \mod p$, then:<br>
+
+  $1, a, a^{2}, \dots, a^{k - 1} (\mod p)$ 
+
+  form a subgroup of $G_{p}^{*}$
+  
   
 </p>

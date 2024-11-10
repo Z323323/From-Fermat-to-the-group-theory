@@ -188,6 +188,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 ## Using the same reasoning to prove Euler's Theorem: $a^{\phi(n)} \equiv 1 \mod n$
 
 <p>
+  
   We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are coprime with $n$ [result set: $\{z_{1}, z_{2}, \dots, z_{\phi(n)}\}$]) and the **multiplication property**:
 
   $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} (\mod n)$
@@ -203,6 +204,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   To prove the result set mentioned initially, it's actually quite trivial that:<br>
 
   $a * z_{?} \equiv z_{?} \mod n$ 
+  
 </p>
 
 ## $a^{k(\phi(n))} \equiv 1 \mod n$ corollary proof

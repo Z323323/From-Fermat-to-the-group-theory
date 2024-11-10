@@ -76,7 +76,7 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 
 </p>
 
-## $a^{p - 1} \equiv 1 \mod p$ and $a^{k(p - 1)} \equiv 1 \mod p$ proof background
+## $a^{p - 1} \equiv 1 \mod p$ and $a^{k(p - 1)} \equiv 1 \mod p$ proofs background
 
 ### Cancellation law
 <p>

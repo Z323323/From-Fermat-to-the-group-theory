@@ -241,19 +241,16 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   Since $a^{k(\phi(n))} \equiv 1 \mod n$ and $a^{\phi(n)} \equiv 1 \mod n$ we get
 
-  $a^{p^{q}} \equiv 1^{k(p^{q})} (\mod p^{q})$<br>
   $a^{p^{q}} \equiv 1 (\mod p^{q})$
 
   and
 
-  $a^{k(p^{q})} \equiv 1^{p^{q}} (\mod p^{q})$<br>
   $a^{k(p^{q})} \equiv 1 (\mod p^{q})$
 
   for any $a$ which is coprime with $p^{q}$, hence this congruences have $\phi(p^{q})$ solutions.
-
 </p>
 
-## Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ 
+### Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ 
 
 <p>
   This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
@@ -273,15 +270,13 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   $z_{1}, z_{2} \in G$ -> $k_{1} \neq k_{2}$ where $k_{1}, k_{2} < p$
 
-  Given the omomorphism (which proves $k_{1}, k_{2} < p$):
+  Given the omomorphism (which proves $k_{1}, k_{2} < p$ along with the **multiplication property** which is another omomorphism):
 
-  $\varphi(a - b) = \varphi(a) - \varphi(b)$
-  
-  -> $(a - b) \mod p = a \mod p (-b) \mod p$
-  
-  -> $a + p - b \mod p = a \mod p + p - b \mod p$
-  
-  -> $a - b \mod p = a \mod p - b \mod p$
+  $\varphi(a - b) = \varphi(a) - \varphi(b)$<br>
+  $->$<br> 
+  $(a - b) \mod p = a \mod p + (-b) \mod p$<br>
+  $a - b \mod p = a \mod p + p - b \mod p$<br>
+  $a - b \mod p = a \mod p - b \mod p$
 
   we can rewrite the Bezout's Indentity as:
 
@@ -291,15 +286,6 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$
   
-  it's true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and the Wilson's Theorem since this proof was requested to complete the proof.<br>
+  it's true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.<br>
 
-  Now, since we just proved that $G$ is a multiplicative group (we can write it like: $G_{p}^{*}$):<br>
-
-  let $a$ be an element of $G_{p}^{*}$, let $k$ be the order of $a$, i.e. the smallest $k$ such that $a^{k} \equiv 1 \mod p$, then:<br>
-
-  $1, a, a^{2}, \dots, a^{k - 1} (\mod p)$ 
-
-  form a subgroup of $G_{p}^{*}$
-  
-  
 </p>

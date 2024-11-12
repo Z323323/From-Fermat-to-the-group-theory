@@ -1,7 +1,7 @@
-# Fermat's Little Theorem proofs
+# From Fermat's Little Theorem proofs to the group theory
 
-Some proofs of the Fermat's Theorem and Euler's Theorem (and corollaries) and some useful properties of modular arithmetic.<br>
-To start, we need to prove $a^{p} \equiv a \mod p$ with $p$ prime and $p > a > 0$ using the Multinomial Theorem.
+This resource contains proofs of the Fermat's Little Theorem, Euler's Theorem and useful corollaries of the aforementioned and some useful properties of modular arithmetic, which open the doors to the group theory.<br>
+To start, we need to prove $a^{p} \equiv a \mod p$ with $p$ prime and $p > a > 0$ using the Multinomial Theorem. If you're trying to speed up the process you can safely skip this first proof, since the attention is focused more on the following ones.
 
 ## Multinomial theorem
 <p>

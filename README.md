@@ -219,6 +219,35 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $a^{k(\phi(n))} \equiv 1 \mod n$
 </p>
 
+## $a^{p^{q}} \equiv 1 \mod p^{q}$ and $a^{k(p^{q})} \equiv 1 \mod p^{q}$ proofs
+
+<p>
+  We can proceed in the same way as the Euler's Theorem ($p^{q}$ is not prime), producing this rearrangement: 
+
+  $z_{1}a^{kp^{q}} * z_{2}a^{kp^{q}} * z_{3}a^{kp^{q}} * \dots * z_{\phi(p^{q})}a^{kp^{q}} \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(p^{q})} (\mod p^{q})$
+
+  Collecting:
+
+  $a^{kp^{q}\phi(n)} Z \equiv (1)Z (\mod p^{q})$
+
+  Applying the **cancellation law**:
+
+  $a^{kp^{q}\phi(p^{q})} \equiv 1 (\mod p^{q})$<br>
+
+  Since $a^{k(\phi(n))} \equiv 1 \mod n$ and $a^{\phi(n)} \equiv 1 \mod n$ we get
+
+  $a^{p^{q}} \equiv 1^{k(p^{q})} (\mod p^{q})$<br>
+  $a^{p^{q}} \equiv 1 (\mod p^{q})$
+
+  and
+
+  $a^{k(p^{q})} \equiv 1^{p^{q}} (\mod p^{q})$<br>
+  $a^{k(p^{q})} \equiv 1 (\mod p^{q})$
+
+  for any $a$ which is coprime with $p^{q}$, hence this congruences have $\phi(p^{q})$ solutions.
+
+</p>
+
 ## Proof of $a^{p - 1} \equiv 1 \mod p$ using elements of the group theory
 
 <p>

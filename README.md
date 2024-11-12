@@ -1,7 +1,7 @@
-# From Fermat's Little Theorem proofs to the group theory
+# From Fermat's Little Theorem to the group theory
 
-This resource contains proofs of the Fermat's Little Theorem, Euler's Theorem and useful corollaries of the aforementioned and some useful properties of modular arithmetic, which open the doors to the group theory.<br>
-To start, we need to prove $a^{p} \equiv a \mod p$ with $p$ prime and $p > a > 0$ using the Multinomial Theorem. If you're trying to speed up the process you can safely skip this first proof, since the attention is focused more on the following ones.
+This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory.<br>
+I initially wrote the proof of $a^{p} \equiv a \mod p$ with $p$ prime and $p > a > 0$ using the Multinomial Theorem, but if you're trying to speed up the process you can safely skip this first proof, since the attention is focused more on the following ones.
 
 ## Multinomial theorem
 <p>
@@ -53,22 +53,21 @@ This is the coeff. of every term, if you try to calculate it you will find that 
   We can represent $a^{p}$ as $(1 + 1 + \dots + 1)^{p}$ and apply the multinomial theorem, this will build some sets with $a$ $k_{1} \dots k_{a}$.<br>
   We can immediately notice $a$ sets of $(p_{1}, 0_{2}, 0_{3}, \dots, 0_{a})$ like terms (for which the coeff. will be $1$).<br>
   All other terms will need to 'produce' $p$ too as sum of $k_{1} \dots k_{a}$, then:
-  $(\frac{n!}{k_{1}! \dots k_{m}!})$ will have $k_{1}! \dots k_{m}!$ composed only by factors which are coprime with $p$ since it's prime and $p > k_{1 \dots m}!$. This means: <br>
+  $(\frac{n!}{k_{1}! \dots k_{m}!})$ will have $k_{1}! \dots k_{m}!$ composed only by factors which are coprime with $p$ since it's prime and $p > k_{1 \dots m}!$. This means:
+  
   $(\frac{n!}{k_{1}! \dots k_{m}!}) \equiv 0 \mod p$
 
-  and:
+  and
 
   $(\frac{n!}{k_{1}! \dots k_{m}!}) \equiv 1 \mod p$ 
 
-  in every other case.
+  in every other case, since 'every other case' are the cases mentioned initially and there are $a$ of those.<br>
 
-  Since 'every other case' are the cases mentioned initially and there are $a$ of those. We will end up having something like:<br>
-
-  calling $C_{1 \dots nCombs}$ the coeffs of the multinomial theorem, and $z_{1 \dots nCombs}$ the products of $x_{1 \dots a}^{k_1 \dots a} = 1$:
+  Calling $C_{1 \dots nCombs}$ the coeffs of the multinomial theorem, and $z_{1 \dots nCombs}$ the products of $x_{1 \dots a}^{k_1 \dots a} = 1$:
 
   $a^{p} = C_{1}z_{1} + C_{2}z_{2} + \dots + C_{nCombs}z_{nCombs}$
 
-  will have $a$ $C_{?}z_{?} \equiv 1 \mod p$ and $nCombs - a$ $C_{?}z_{?} \equiv 0 \mod p$ then:<br>
+  will have $a$ $C_{?}z_{?} \equiv 1 \mod p$ and $nCombs - a$ $C_{?}z_{?} \equiv 0 \mod p$, then<br>
 
   $a^{p} = (C_{1}z_{1} + C_{2}z_{2} + \dots + C_{nCombs}z_{nCombs}) \equiv a \mod p$
   
@@ -80,29 +79,35 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 
 ### Cancellation law
 <p>
-  If $u, x, y$ are integers and $u$ is coprime with a prime $p$ then if:<br>
+  If $u, x, y$ are integers and $u$ is coprime with a prime $p$, then if:<br>
 
-  $ux \equiv uy \mod p$
-  
-  -> $x \equiv y \mod p$
+  $ux \equiv uy \mod p$<br>
+  $->$<br>
+  $x \equiv y \mod p$<br>
 
-  because if:
+  Because if:
 
-   $ux \equiv uy \mod p$ -> $p | ux - uy$ -> $p | u(x - y)$
+   $ux \equiv uy \mod p$ <br>
+   $->$ <br>
+   $p | ux - uy$<br>
+   $->$ <br>
+   $p | u(x - y)$
 
-   and since $u$ is coprime with $p$:
+   and since $u$ is coprime with $p$
 
-   $p | (x - y)$ -> $x \equiv y \mod p$
+   $p | (x - y)$<br>
+   $->$<br>
+   $x \equiv y \mod p$
 </p>
 
 ### Rearrangement property
 
 <p>
-$a$ and $p$ are coprimes, $p$ is prime:
+$a$ and $p$ are coprimes, $p$ is prime, then:
   
   $a, 2a, 3a, \dots, (p - 1)a \mod p$
 
-  becomes a 'rearrangement' of:
+  becomes a 'rearrangement' of
   
   $1, 2, 3, \dots, (p - 1)$
 
@@ -113,15 +118,15 @@ We take the sequence of congruences:
 
 $a, 2a, 3a, \dots, (p - 1)a \mod p$
 
-and represent each pair as:
+and represent each pair as
 
 $ka \equiv ma \mod p$
 
 From the **cancellation law** we know that since $a$ is coprime with $p$:
 
-$ka \equiv ma \mod p$
-
--> $k \equiv m \mod p$
+$ka \equiv ma \mod p$<br>
+$->$<br>
+$k \equiv m \mod p$<br>
 
 but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved. Here should be noted that the **rearrangement property** works if and only if we consider the whole $\\{1, 2, 3, \dots, (p - 1)\\}$ set.
 </p>
@@ -130,8 +135,13 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 <p>
   $ab \mod p = (a \mod p)(b \mod p )(\mod p)$
   
-  $a \equiv x \mod p$ -> $a = zp + x$<br>
-  $b \equiv y \mod p$ -> $b = kp + y$<br>
+  $a \equiv x \mod p$<br>
+  $->$<br> 
+  $a = zp + x$<br>
+  
+  $b \equiv y \mod p$<br>
+  $->$<br>
+  $b = kp + y$<br>
   
   with $z, k \geq 0$
 
@@ -162,7 +172,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   $a^{p - 1}(Z) \equiv 1(Z) (\mod p)$
 
-  where $Z$ is coprime with $p$, then, applying the **cancellation law**:
+  where $Z$ is coprime with $p$, then, applying the **cancellation law**
 
   $a^{p - 1} \equiv 1 (\mod p)$
 
@@ -189,22 +199,17 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
 <p>
   
-  We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are coprime with $n$ [result set: $\{z_{1}, z_{2}, \dots, z_{\phi(n)}\}$]) and the **multiplication property**:
+  We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are pairwise $\neq$) and the **multiplication property**:
 
   $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} (\mod n)$
 
-  collecting the terms
+  Collecting the terms:
   
   $a^{\phi(n)} Z \equiv (1)Z (\mod n)$
 
-  and using the **cancellation law** (holds since $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$):
+  Using the **cancellation law** (holds since $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$):
 
-  $a^{\phi(n)} \equiv 1 (\mod n)$
-
-  To prove the result set mentioned initially, it's actually quite trivial that:<br>
-
-  $a * z_{?} \equiv z_{?} \mod n$ 
-  
+  $a^{\phi(n)} \equiv 1 (\mod n)$  
 </p>
 
 ## $a^{k(\phi(n))} \equiv 1 \mod n$ corollary proof
@@ -228,7 +233,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   Collecting:
 
-  $a^{kp^{q}\phi(n)} Z \equiv (1)Z (\mod p^{q})$
+  $a^{kp^{q}\phi(p^{q})} Z \equiv (1)Z (\mod p^{q})$
 
   Applying the **cancellation law**:
 
@@ -248,7 +253,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
 </p>
 
-## Proof of $a^{p - 1} \equiv 1 \mod p$ using elements of the group theory
+## Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ 
 
 <p>
   This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
@@ -259,7 +264,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   $\\{G, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
 
-  where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse.<br>
+  where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.).<br>
   Since all these requirements are quite obvious, the only one which needs a more detailed analysis is the inverse existence for every element which is anyway quite easy to prove: calling $z$ any element of G, since $z$ is coprime with $p$, the Bezout's Identity ensures that:
 
   $zk + (-x)p = 1$

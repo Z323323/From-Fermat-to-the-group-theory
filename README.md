@@ -278,7 +278,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $a - b \mod p = a \mod p + p - b \mod p$<br>
   $a - b \mod p = a \mod p - b \mod p$
 
-  we can rewrite the Bezout's Indentity as:
+  we can rewrite the Bezout's Indentity as
 
   $zk \equiv 1 \mod p$
 

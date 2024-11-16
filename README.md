@@ -1,6 +1,6 @@
 # From Fermat's Little Theorem to the group theory
 
-This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [ .<br>
+This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [ ].<br>
 I initially wrote the proof of $a^{p} \equiv a \mod p$ with $p$ prime and $p > a > 0$ using the Multinomial Theorem, but if you're trying to speed up the process you can safely skip this first proof, since the attention is focused more on the following ones.
 
 ## Multinomial theorem
@@ -229,37 +229,29 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 <p>
   This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
   
-  $G = \\{1, 2, \dots, p - 1\\}$
+  $Z_{p} = \\{1, 2, \dots, p - 1\\}$
 
   with the operation of multiplication:
 
-  $\\{G, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
+  $\\{Z_{p}, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
 
   where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.).<br>
-  Since all these requirements are quite obvious, the only one which needs a more detailed analysis is the inverse existence for every element which is anyway quite easy to prove: calling $z$ any element of G, since $z$ is coprime with $p$, the Bezout's Identity ensures that:
+  Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element: calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that:
 
   $zk + (-x)p = 1$
 
-  exists for every $z$, proving this statement. The problem now is to prove that $k < p$ and that every solution is unique, i.e. for every:
-
-  $z_{1}, z_{2} \in G$ -> $k_{1} \neq k_{2}$ where $k_{1}, k_{2} < p$
-
-  Given the omomorphism (which proves $k_{1}, k_{2} < p$ along with the **multiplication property** which is another omomorphism):
-
-  $\varphi(a - b) = \varphi(a) - \varphi(b)$<br>
-  $->$<br> 
-  $(a - b) \mod p = a \mod p + (-b) \mod p$<br>
-  $a - b \mod p = a \mod p + p - b \mod p$<br>
-  $a - b \mod p = a \mod p - b \mod p$
-
-  we can rewrite the Bezout's Indentity as
+  always exists, and we can rewrite this as
 
   $zk \equiv 1 \mod p$
 
-  Now we can reuse the almighty 'cancellation law' and state that if:
+  proving that every element of $Z_{p}^{*}$ has an inverse.<br>
+  Now the real question is about uniqueness:
+  
+  we can reuse the almighty 'cancellation law' and state that if
 
   $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$
   
-  is true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.<br>
+  is true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, 
+  k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.<br>
 
 </p>

@@ -236,7 +236,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $\\{Z_{p}, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
 
   where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.).<br>
-  Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element: calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that:
+  Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element: calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
 
   $zk + (-x)p = 1$
 

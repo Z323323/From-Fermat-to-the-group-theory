@@ -40,7 +40,7 @@ But there's another better formed solution for sure.
 
 Now what's actually crazy about this theorem is that it correlates these combinations with powers and coeffs of every term of any power (ahhh these mathematicians...).<br>
 
-$(\frac{n!}{k_{1}! \dots k_{m}!})$ 
+$\displaystyle (\frac{n!}{k_{1}! \dots k_{m}!})$ 
 
 This is the coeff. of every term, if you try to calculate it you will find that is correct. Now for this example is quite fast to check, but it actually works for every power and any number of $xs \dots$
 
@@ -50,27 +50,24 @@ This is the coeff. of every term, if you try to calculate it you will find that 
 
 <p>
   We can represent $a^{p}$ as $(1 + 1 + \dots + 1)^{p}$ and apply the multinomial theorem, this will build some sets with $a$ $k_{1} \dots k_{a}$.<br>
-  We can immediately notice $a$ sets of $(p_{1}, 0_{2}, 0_{3}, \dots, 0_{a})$ like terms (for which the coeff. will be $1$).<br>
+  We can immediately notice $a$ sets of $(p, 0_{2}, 0_{3}, \dots, 0_{a})$ like terms (for which the coeff. will be $1$).<br>
   All other terms will need to 'produce' $p$ too as sum of $k_{1} \dots k_{a}$, then:
-  $(\frac{n!}{k_{1}! \dots k_{m}!})$ will have $k_{1}! \dots k_{m}!$ composed only by factors which are coprime with $p$ since it's prime and $p > k_{1 \dots m}!$. This means:
   
-  $(\frac{n!}{k_{1}! \dots k_{m}!}) \equiv 0 \mod p$
+  $\displaystyle \frac{p!}{k_{1}! \dots k_{a}!} = 1$
 
-  and
+  for $a$ cases mentioned above (since there's only $1$ divisor which is $p!$), and
 
-  $(\frac{n!}{k_{1}! \dots k_{m}!}) \equiv 1 \mod p$ 
+  $\displaystyle \frac{p!}{k_{1}! \dots k_{a}!} \equiv 0 \mod p$
 
-  in every other case, since 'every other case' are the cases mentioned initially and there are $a$ of those.<br>
+  for any other case, which proves the theorem.<br>
 
-  Calling $C_{1 \dots nCombs}$ the coeffs of the multinomial theorem, and $z_{1 \dots nCombs}$ the products of $x_{1 \dots a}^{k_1 \dots a} = 1$:
+  To better understand the latter, you can start by thinking at $(p - 1)!1!$, this one clearly removes all factors except for $p$ and it's easy to understand, while it's important to remove from the reasoning (since we can't think at another combination where $(p - 1)!$ exists). Now if you think about $(p - 2)!2!$ you could think that $2$ is removed twice, hence how does the former holds? Simply because $p!$ contains $(p - 1)!$. Now imagine $(p - 1)(2)$. It's quite clear that it will be quite easy to remove $2$ twice from it. And since $p - 1$ can be represented as the sum of any factor which we need to remove more than once, this reasoning holds (this should in turn be proved since it's not simple at all, but to understand this thing imagine that every time we add up one factor we are always decreasing $p$, hence the max number of non trivial factors will be $(p - 1)/2$ + 1 [which is eliminated from the reasoning]. You can clearly see that this match exactly our previous reasoning regarding the $p - 1$ factor, but this holds in general. Indeed every sum of addends which produce $p$ will never be $>$ than $(p - 1)?$ where $?$ is the factorial which sums instead of multiplying). Now what we are actually interested into is not $p - 1$, but $p$. Since our $(p - 1)!$ factor will be enough to remove every possible divisor by the former reasoning, $p$ will be always multiplied by something proving the above congruence (and the theorem). 
+
+  Calling $C_{1 \dots nCombs}$ the coeffs of the multinomial theorem, and $z_{1 \dots nCombs}$ the products of $x_{1 \dots a}^{k_1 \dots a} = 1$ (thus we can safely remove them):
 
   $a^{p} = C_{1}z_{1} + C_{2}z_{2} + \dots + C_{nCombs}z_{nCombs}$
 
-  will have $a$ $C_{?}z_{?} \equiv 1 \mod p$ and $nCombs - a$ $C_{?}z_{?} \equiv 0 \mod p$, then<br>
-
-  $a^{p} = (C_{1}z_{1} + C_{2}z_{2} + \dots + C_{nCombs}z_{nCombs}) \equiv a \mod p$
-  
-  which proves the theorem.
+  $a^{p} \mod p = C_{1} + C_{2} + \dots + C_{nCombs} \mod p = a$
 
 </p>
 

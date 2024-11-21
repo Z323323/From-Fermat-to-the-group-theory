@@ -220,6 +220,16 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $a^{k(\phi(n))} \equiv 1 \mod n$
 </p>
 
+## $a^{k(\phi(n)) + 1} \equiv a \mod n$ corollary proof
+
+<p>
+  We can rewrite the formula above as
+
+  $a^{k(\phi(n))}a \equiv a \mod n$
+
+  Since we proved $a^{k(\phi(n))} \equiv 1 \mod n$ this one follows.
+</p>
+
 ### Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ and $Z_{\phi(n)}^{\ast}$ 
 
 <p>

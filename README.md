@@ -224,7 +224,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $a^{k(\phi(n))} \equiv 1 \mod n$
 </p>
 
-### Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ 
+### Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ and $Z_{\phi(n)}^{\ast}$ 
 
 <p>
   This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
@@ -254,4 +254,5 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   is true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, 
   k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.<br>
 
+  This whole reasoning is easily iterable for $Z_{\phi(n)}^{\ast}$, proving that every element of $Z_{\phi(n)}^{\ast}$ also has an inverse which is unique.
 </p>

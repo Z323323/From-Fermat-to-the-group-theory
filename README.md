@@ -1,6 +1,6 @@
 # From Fermat's Little Theorem to the group theory
 
-This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [ https://github.com/Z323323/Group-theory-elements ].<br>
+This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [https://github.com/Z323323/Group-theory-elements].<br>
 
 ## Multinomial theorem
 <p>

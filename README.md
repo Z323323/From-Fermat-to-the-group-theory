@@ -125,7 +125,7 @@ $ka \equiv ma \mod p$<br>
 $->$<br>
 $k \equiv m \mod p$<br>
 
-but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved. Here should be noted that the **rearrangement property** works if and only if we consider the whole $\\{1, 2, 3, \dots, (p - 1)\\}$ set.
+but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is: $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved.
 </p>
 
 ### Multiplication property

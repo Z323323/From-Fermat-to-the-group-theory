@@ -1,76 +1,7 @@
 # From Fermat's Little Theorem to the group theory
 
-This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [https://github.com/Z323323/Group-theory-elements].<br>
-Note also that the first proof can be safely skipped.
+This resource contains the proofs of the Fermat's Little Theorem, Euler's Theorem and corollaries of the aforementioned, and some necessary properties of modular arithmetic. All these are required in order to grasp the group theory, indeed this article is a requirement to proceed to [https://github.com/Z323323/Group-theory-elements].
 
-## Multinomial theorem
-<p>
-  Since this is quite difficult to understand I'm simplifying as much as possible (it's almost the same as Wiki by the way).
-  For any positive integer $m$ and non-negative integer $n$ this theorem describes how a sum of $m$ terms expands when raised to the nth power:
-
-  $(x_{1} + x_{2} + \dots + x_{m})^{n} = \sum_{k_{1} + \dots + k_{m} = n} (\frac{n!}{k_{1}! \dots k_{m}!}) x_{1}^{k_{1}} x_{2}^{k_{2}} \dots x_{m}^{k_{m}}$
-
-  This is a strange summation because of: $k_{1} + \dots + k_{m} = n$. There's no need to explain the meaning but it's somehow strange because it builds a combination of $k_{1} \dots k_{m}$ implicitly, see below.<br>
-
-</p>
-
-#### Lightning fast example
-
-<p>
-  $(a + b + c)^{3} = a^{3} + b^{3} + c^{3} + 3a^{2}b + 3a^{2}c + 3b^{2}a + 3b^{2}c + 3c^{2}a + 3c^{2}b + 6abc$
-
-The implicit combination is:<br>
-
-  1. $(3, 0, 0)$
-  2. $(0, 3, 0)$
-  3. $(0, 0, 3)$
-  4. $(2, 1, 0)$
-  5. $(2, 0, 1)$
-  6. $(1, 2, 0)$
-  7. $(0, 2, 1)$
-  8. $(1, 0, 2)$
-  9. $(0, 1, 2)$
-  10. $(1, 1, 1)$
-
-Combinations are not an easy topic, here the quest. is: how many sets of $3$ elements can we build with 4 elements ($0, 1, 2, 3$) without breaking $k_{1} + \dots + k_{m} = n$ ? Not so easy. Since $3$ is enough to saturate it we'll have $n$ sets with it, and $1$ set with $1s$. Then $(2, 1, 0)$ form: <br>
-
-$3! = 6$ combinations of 3 elements and <br>
-$6 + n + 1 = 10$ solutions.
-
-But there's another better formed solution for sure.
-
-Now what's actually crazy about this theorem is that it correlates these combinations with powers and coeffs of every term of any power (ahhh these mathematicians...).<br>
-
-$\displaystyle (\frac{n!}{k_{1}! \dots k_{m}!})$ 
-
-This is the coeff. of every term, if you try to calculate it you will find that is correct. Now for this example is quite fast to check, but it actually works for every power and any number of $xs \dots$
-
-</p>
-
-## Back to Fermat
-
-<p>
-  We can represent $a^{p}$ as $(1 + 1 + \dots + 1)^{p}$ and apply the multinomial theorem, this will build some sets with $a$ $k_{1} \dots k_{a}$.<br>
-  We can immediately notice $a$ sets of $(p, 0_{2}, 0_{3}, \dots, 0_{a})$ like terms (for which the coeff. will be $1$).<br>
-  All other terms will need to 'produce' $p$ too as sum of $k_{1} \dots k_{a}$, then:
-  
-  $\displaystyle \frac{p!}{k_{1}! \dots k_{a}!} = 1$
-
-  for $a$ cases mentioned above (since there's only $1$ divisor which is $p!$), and
-
-  $\displaystyle \frac{p!}{k_{1}! \dots k_{a}!} \equiv 0 \mod p$
-
-  for any other case, which proves the theorem.<br>
-
-  To better understand the latter, you can start by thinking at $(p - 1)!1!$, this one clearly removes all factors except for $p$ and it's easy to understand, while it's important to remove from the reasoning (since we can't think at another combination where $(p - 1)!$ exists). Now if you think about $(p - 2)!2!$ you could think that $2$ is removed twice, hence how does the former holds? Simply because $p!$ contains $(p - 1)!$. Now imagine $(p - 1)(2)$. It's quite clear that it will be quite easy to remove $2$ twice from it. And since $p - 1$ can be represented as the sum of any factor which we need to remove more than once, this reasoning holds (this should in turn be proved since it's not simple at all, but to understand this thing imagine that every time we add up one factor we are always decreasing $p$, hence the max number of non trivial factors will be $(p - 1)/2$ + 1 [which is eliminated from the reasoning]. You can clearly see that this match exactly our previous reasoning regarding the $p - 1$ factor, but this holds in general. Indeed every sum of addends which produce $p$ will never be $>$ than $(p - 1)?$ where $?$ is the factorial which sums instead of multiplying). Now what we are actually interested into is not $p - 1$, but $p$. Since our $(p - 1)!$ factor will be enough to remove every possible divisor by the former reasoning, $p$ will be always multiplied by something proving the above congruence (and the theorem). 
-
-  Calling $C_{1 \dots nCombs}$ the coeffs of the multinomial theorem, and $z_{1 \dots nCombs}$ the products of $x_{1 \dots a}^{k_1 \dots a} = 1$ (thus we can safely remove them):
-
-  $a^{p} = C_{1}z_{1} + C_{2}z_{2} + \dots + C_{nCombs}z_{nCombs}$
-
-  $a^{p} \mod p = C_{1} + C_{2} + \dots + C_{nCombs} \mod p = a$
-
-</p>
 
 ## $a^{p - 1} \equiv 1 \mod p$ and $a^{k(p - 1)} \equiv 1 \mod p$ proofs background
 
@@ -252,9 +183,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $zk \equiv 1 \mod p$
 
   proving that every element of $Z_{p}^{*}$ has an inverse.<br>
-  Now the real question is about uniqueness:
-  
-  we can reuse the almighty 'cancellation law' and state that if
+  Now the real question is about uniqueness: we can reuse the almighty 'cancellation law' and state that if
 
   $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$
   

@@ -123,7 +123,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   The **rearrangement** holds since if $a$ is coprime with $p$ then $a^{k}$ will be coprime too for any $k \in N > 0$.
 
-  $a^{k} * 2a^{k} * 3a^{k} * \dots * (p - 1)a^{k} \equiv 1 * 2 * 3 * \dots * (p - 1) \mod p$
+  $a^{k} \cdot 2a^{k} \cdot 3a^{k} \cdot \dots \cdot (p - 1)a^{k} \equiv 1 \cdot 2 \cdot 3 \cdot \dots \cdot (p - 1) \mod p$
 
   Collecting and applying the **cancellation law** produces
 

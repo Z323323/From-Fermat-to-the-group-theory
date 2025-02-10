@@ -183,9 +183,9 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   with the operation of multiplication
 
-  $\\{Z_{p}, \cdot\\} = \\{z_{1} \cdot z_{2} \mod p\\}$
+  $\\{Z_{p}, \cdot\\} = \\{x \cdot y \mod p\\}$
 
-  where $x, y$ are positive integers; forms a multiplicative group, that is, a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.). Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element. Calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
+  where $x, y$ are positive integers $> 0$; forms a multiplicative group, that is, a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.). Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element. Calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
 
   $zk + (-x)p = 1$
 

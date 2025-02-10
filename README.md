@@ -6,19 +6,21 @@ This resource contains the proofs of the Fermat's Little Theorem, Euler's Theore
 ## $a^{p - 1} \equiv 1 \mod p$ and $a^{k(p - 1)} \equiv 1 \mod p$ proofs background
 
 ### Cancellation law
+
 <p>
-  If $u, x, y$ are integers and $u$ is coprime with a prime $p$, then if:<br>
+  
+  If $u, x, y$ are integers and $u$ is coprime with a prime $p$, then if
 
   $ux \equiv uy \mod p$<br>
   $->$<br>
-  $x \equiv y \mod p$<br>
+  $x \equiv y \mod p$
 
-  Because if:
+  because if
 
-   $ux \equiv uy \mod p$ <br>
-   $->$ <br>
+   $ux \equiv uy \mod p$<br>
+   $->$<br>
    $p | ux - uy$<br>
-   $->$ <br>
+   $->$<br>
    $p | u(x - y)$
 
    and since $u$ is coprime with $p$
@@ -26,12 +28,14 @@ This resource contains the proofs of the Fermat's Little Theorem, Euler's Theore
    $p | (x - y)$<br>
    $->$<br>
    $x \equiv y \mod p$
+   
 </p>
 
 ### Rearrangement property
 
 <p>
-$a$ and $p$ are coprimes, $p$ is prime, then:
+  
+$a$ and $p$ are coprimes, $p$ is prime, then
   
   $a, 2a, 3a, \dots, (p - 1)a \mod p$
 
@@ -39,10 +43,7 @@ $a$ and $p$ are coprimes, $p$ is prime, then:
   
   $1, 2, 3, \dots, (p - 1)$
 
-  This one could look exactly like the former but it's not. This property does not care at all about congruences equalities; it just states that the first formula will be 'mapped' into that sequence of values. 'rearrangement' means that we don't care about which congruence will be mapped into which value, we just want to prove that all those values will be mapped. Nonetheless we will use the **cancellation law** to prove it (:'D).
-The fact that no congruence will 'produce' $0$ is trivial. Why all those values will be distinct is the real question.
-<br>
-We take the sequence of congruences:
+  This one could look exactly like the former but it's not. This property does not care at all about congruences equalities; it just states that the first formula will be 'mapped' into that sequence of values. 'rearrangement' means that we don't care about which congruence will be mapped into which value, we just want to prove that all those values will be mapped. Nonetheless we will use the **cancellation law** to prove it (:'D). The fact that no congruence will 'produce' $0$ is trivial. Why all those values will be distinct is the real question. We take the sequence of congruences
 
 $a, 2a, 3a, \dots, (p - 1)a \mod p$
 
@@ -50,17 +51,20 @@ and represent each pair as
 
 $ka \equiv ma \mod p$
 
-From the **cancellation law** we know that since $a$ is coprime with $p$:
+From the **cancellation law** we know that since $a$ is coprime with $p$
 
 $ka \equiv ma \mod p$<br>
 $->$<br>
 $k \equiv m \mod p$<br>
 
 but this is true only if $k = m$, and since this is not true then every $ka \equiv ma \mod p$ pair must produce a different remainder, and since the result set is $\\{1, 2, 3 \dots, (p - 1)\\}$ then the property is proved.
+
 </p>
 
 ### Multiplication property
+
 <p>
+  
   $ab \mod p = (a \mod p)(b \mod p )(\mod p)$
   
   $a \equiv x \mod p$<br>
@@ -79,93 +83,101 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $zpkp + zpy + xkp + xy (\mod p)$<br>
   $xy \mod p$ _
 
-  hence $ab \mod p = (a \mod p)(b \mod p )(\mod p)$.
+  hence $ab \mod p = (a \mod p)(b \mod p )(\mod p)$
+  
 </p>
 
 ## $a^{p - 1} \equiv 1 \mod p$ proof
 
 <p>
-  This proof has been discovered by James Ivory and Dirichlet.<br>
-  Having proved the former properties this will be easily understandable. <br>
+  
+  This proof has been discovered by James Ivory and Dirichlet.
 
-  We take the **rearrangement property** and the **multiplication property** and state that if they hold, then, this holds:
+  Recalling the **rearrangement property** and the **multiplication property** we can write
 
-  $a * 2a * 3a * \dots * (p - 1)a \equiv 1 * 2 * 3 * \dots * (p - 1) (\mod p)$
+  $a \cdot 2a \cdot 3a \cdot \dots \cdot (p - 1)a \equiv 1 \cdot 2 \cdot 3 \cdot \dots \cdot (p - 1) \mod p$
 
-  Now we can collect every term:
+  Now we can collect every term.
 
-  $a^{p - 1}(p - 1)! \equiv (p - 1)! (\mod p)$
+  $a^{p - 1}(p - 1)! \equiv (p - 1)! \mod p$
 
-  We can think at this formula as:
+  We can think at this formula as
 
-  $a^{p - 1}(Z) \equiv 1(Z) (\mod p)$
+  $a^{p - 1}(Z) \equiv 1(Z) \mod p$
 
   where $Z$ is coprime with $p$, then, applying the **cancellation law**
 
-  $a^{p - 1} \equiv 1 (\mod p)$
+  $a^{p - 1} \equiv 1 \mod p$
 
   which proves $a^{p - 1} \equiv 1 \mod p$.
+  
   </p>
 
 ## $a^{k(p - 1)} \equiv 1 \mod p$ proof
 
 <p>
-  Now we can prove the corollary, which is really important:
+  
+  Now we can prove the corollary, which is really important.
 
   $a^{k(p - 1)} \equiv 1 \mod p$
 
   The **rearrangement** holds since if $a$ is coprime with $p$ then $a^{k}$ will be coprime too for any $k \in N > 0$.
 
-  $a^{k} * 2a^{k} * 3a^{k} * \dots * (p - 1)a^{k} \equiv 1 * 2 * 3 * \dots * (p - 1) (\mod p)$
+  $a^{k} * 2a^{k} * 3a^{k} * \dots * (p - 1)a^{k} \equiv 1 * 2 * 3 * \dots * (p - 1) \mod p$
 
-  Collecting and applying the **cancellation law**:
+  Collecting and applying the **cancellation law** produces
 
-  $a^{k(p - 1)} \equiv 1 (\mod p)$
+  $a^{k(p - 1)} \equiv 1 \mod p$
+  
 </p>
 
 ## Using the same reasoning to prove Euler's Theorem: $a^{\phi(n)} \equiv 1 \mod n$
 
 <p>
   
-  We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are pairwise $\neq$) and the **multiplication property**:
+  We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are pairwise $\neq$) and the **multiplication property** we can write
 
-  $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} (\mod n)$
+  $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} \mod n$
 
-  Collecting the terms:
+  Collecting the terms produces
   
-  $a^{\phi(n)} Z \equiv (1)Z (\mod n)$
+  $a^{\phi(n)} Z \equiv (1)Z \mod n$
 
-  Using the **cancellation law** (holds since $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$):
+  and using the **cancellation law** (holds since $z_{1} \dots z_{\phi(n)}$ are coprimes with $n$) we get
 
-  $a^{\phi(n)} \equiv 1 (\mod n)$  
+  $a^{\phi(n)} \equiv 1 \mod n$
+  
 </p>
 
 ## $a^{k(\phi(n))} \equiv 1 \mod n$ corollary proof
 
 <p>
-  Same reasoning made for the former, that is:
+  
+  Same reasoning made for the former. We can write
 
-  $z_{1}a^{k} * z_{2}a^{k} * z_{3}a^{k} * \dots * z_{\phi(n)}a^{k} \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} (\mod n)$
+  $z_{1}a^{k} \cdot z_{2}a^{k} \cdot z_{3}a^{k} \cdot \dots \cdot z_{\phi(n)}a^{k} \equiv z_{1} \cdot z_{2} \cdot z_{3} \cdot \dots \cdot z_{\phi(n)} \mod n$
 
-  Collecting and applying the **cancellation law**:
+  Collecting and applying the **cancellation law** we obtain
 
   $a^{k(\phi(n))} \equiv 1 \mod n$
+  
 </p>
 
 ## $a^{k(\phi(n)) + 1} \equiv a \mod n$ corollary proof
 
 <p>
+  
   We can rewrite the formula above as
 
   $a^{k(\phi(n))}a \equiv a \mod n$
 
   Since we proved $a^{k(\phi(n))} \equiv 1 \mod n$ this one follows.
+  
 </p>
 
 ### Proof of existence and uniqueness of inverses in $Z_{p}^{*}$ and $Z_{\phi(n)}^{\ast}$ 
 
 <p>
-  This could seem unnecessary at this point, but it could be useful to understand some basic (while important) group theory elements.
   
   $Z_{p} = \\{1, 2, \dots, p - 1\\}$
 

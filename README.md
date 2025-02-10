@@ -37,7 +37,7 @@ This resource contains the proofs of the Fermat's Little Theorem, Euler's Theore
   
 $a$ and $p$ are coprimes, $p$ is prime, then
   
-  $a, 2a, 3a, \dots, (p - 1)a \mod p$
+  $a, 2a, 3a, \dots, (p - 1)a (\mod p)$
 
   becomes a 'rearrangement' of
   
@@ -45,7 +45,7 @@ $a$ and $p$ are coprimes, $p$ is prime, then
 
   This one could look exactly like the former but it's not. This property does not care at all about congruences equalities; it just states that the first formula will be 'mapped' into that sequence of values. 'rearrangement' means that we don't care about which congruence will be mapped into which value, we just want to prove that all those values will be mapped. Nonetheless we will use the **cancellation law** to prove it (:'D). The fact that no congruence will 'produce' $0$ is trivial. Why all those values will be distinct is the real question. We take the sequence of congruences
 
-$a, 2a, 3a, \dots, (p - 1)a \mod p$
+$a, 2a, 3a, \dots, (p - 1)a (\mod p)$
 
 and represent each pair as
 
@@ -83,7 +83,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $zpkp + zpy + xkp + xy (\mod p)$<br>
   $xy \mod p$ _
 
-  hence $ab \mod p = (a \mod p)(b \mod p )(\mod p)$
+  hence $ab \mod p = (a \mod p)(b \mod p )(\mod p)$.
   
 </p>
 
@@ -137,7 +137,7 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   
   We call $z_{1} \dots z_{\phi(n)}$ the integers which are coprime with $n$, then using the **rearrangement property** (which holds because $a$ and $n$ are coprimes and because $z_{1} \dots z_{\phi(n)}$ are pairwise $\neq$) and the **multiplication property** we can write
 
-  $z_{1}a * z_{2}a * z_{3}a * \dots * z_{\phi(n)}a \equiv z_{1} * z_{2} * z_{3} * \dots * z_{\phi(n)} \mod n$
+  $z_{1}a \cdot z_{2}a \cdot z_{3}a \cdot \dots \cdot z_{\phi(n)}a \equiv z_{1} \cdot z_{2} \cdot z_{3} \cdot \dots \cdot z_{\phi(n)} \mod n$
 
   Collecting the terms produces
   
@@ -181,12 +181,11 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   
   $Z_{p} = \\{1, 2, \dots, p - 1\\}$
 
-  with the operation of multiplication:
+  with the operation of multiplication
 
   $\\{Z_{p}, *\\} = \\{z_{x \mod p} * z_{y \mod p} \mod p\\}$
 
-  where $x, y$ are positive integers; forms a multiplicative group, i.e. a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.).<br>
-  Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element: calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
+  where $x, y$ are positive integers; forms a multiplicative group, that is, a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.). Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element. Calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
 
   $zk + (-x)p = 1$
 
@@ -194,13 +193,13 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   $zk \equiv 1 \mod p$
 
-  proving that every element of $Z_{p}^{*}$ has an inverse.<br>
-  Now the real question is about uniqueness: we can reuse the almighty 'cancellation law' and state that if
+  proving that every element of $Z_{p}^{*}$ has an inverse. Now the real question is about uniqueness. We can reuse the almighty 'cancellation law' and state that if
 
   $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$
   
   is true, then $z_{1}, z_{2}$ should be the same number since $z_{1}, z_{2} < p$ and $k_{1} < p$ (this means it's coprime, otherwise we couldn't use the law). Since the hypothesis is that they are not the same number $k_{1_{1}}, 
-  k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.<br>
+  k_{1_{2}}$ are forced to be different. This proves the uniqueness of the inverses and one part of the Wilson's Theorem since this proof was requested to complete the proof.
 
   This whole reasoning is easily iterable for $Z_{\phi(n)}^{\ast}$, proving that every element of $Z_{\phi(n)}^{\ast}$ also has an inverse which is unique.
+  
 </p>

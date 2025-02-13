@@ -79,8 +79,6 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $(zp + x)(kp + y)(\mod p)$<br>
   $zpkp + zpy + xkp + xy (\mod p)$<br>
   $xy \mod p$ _
-
-  hence $ab \mod p = (a \mod p)(b \mod p )(\mod p)$.
   
 </p>
 

@@ -178,16 +178,23 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
 
   with the operation of multiplication
 
-  $\\{Z_{p}, \cdot\\} = \\{x \cdot y \mod p\\}$
+  $(Z_{p}, \cdot \mod p) = (\\{1, 2, \dots, p - 1\\}, \cdot \mod p)$
 
-  where $x, y$ are positive integers $> 0$; forms a multiplicative group, that is, a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse (etc.). Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element. Calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
+  forms a multiplicative group, that is, a set with a binary operation which produces from $2$ elements of the set, $1$ element of the same set; where exists an identity element ($1$) and where each element has an inverse etc.. Since all these requirements are quite obvious, the only one which (for the moment) needs a more detailed analysis is the inverse existence and uniqueness for every element. Calling $z$ any element of $Z_{p}^{*}$, since $z$ is coprime with $p$, the Bezout's Identity ensures that
 
-  $zk + (-x)p = 1$
-
-  always exists, and we can rewrite this as
-
-  $zk \equiv 1 \mod p$
-
+  $zk + xp = 1$<br>
+  $->$<br>
+  $zk - xp = 1$<br>
+  $->$<br>
+  $zk \equiv 1 \mod p$<br>
+  $or$<br>
+  $->$<br>
+  $- zk + xp = 1$<br>
+  $->$<br>
+  $zk - xp = - 1$<br>
+  $->$<br>
+  $zk \equiv - 1 \mod p$
+  
   proving that every element of $Z_{p}^{*}$ has an inverse. Now the real question is about uniqueness. We can reuse the almighty 'cancellation law' and state that if
 
   $z_{1}k_{1} \equiv z_{2}k_{1} \mod p$

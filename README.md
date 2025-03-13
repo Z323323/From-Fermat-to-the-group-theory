@@ -188,7 +188,6 @@ but this is true only if $k = m$, and since this is not true then every $ka \equ
   $->$<br>
   $zk \equiv 1 \mod p$<br>
   $or$<br>
-  $->$<br>
   $- zk + xp = 1$<br>
   $->$<br>
   $zk - xp = - 1$<br>

@@ -40,7 +40,7 @@ $a$ and $p$ are coprimes, $p$ is prime, then
   
   $1, 2, 3, \dots, (p - 1)$
 
-  This one could look exactly like the former but it's not. This property does not care at all about congruences equalities; it just states that the first formula will be 'mapped' into that sequence of values. 'rearrangement' means that we don't care about which congruence will be mapped into which value, we just want to prove that all those values will be mapped. Nonetheless we will use the **cancellation law** to prove it (:'D). The fact that no congruence will 'produce' $0$ is trivial. Why all those values will be distinct is the real question. We take the sequence of congruences
+We take the sequence of congruences
 
 $a, 2a, 3a, \dots, (p - 1)a (\mod p)$
 
